@@ -1,5 +1,35 @@
-<h1>{{.Title}}</h1>
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>Edit a Post</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- BOOTSTRAP CSS -->
+		<link href="data/css/bootstrap.min.css" rel="stylesheet">
+		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" type="text/css" href="data/css/main.css">
+		<!-- FONT AWESOME -->
+		<link rel="stylesheet" type="text/css" href="data/css/font-awesome.min.css">
+		<style type="text/css">
+			.row {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<h1>{{.Title}}</h1>
 
-<p>[<a href="/edit/{{.Title}}">edit</a>]</p>
+			<p>[<a href="/edit/{{.Title}}">edit</a>]</p>
 
-<div>{{printf "%s" .Body}}</div>
+			<div>{{printf "%s" .Body}}</div>
+		</div>
+		<!-- JQUERY -->
+		<script src="data/js/jquery-3.1.0.min.js"></script>
+		<!-- BOOTSTRAP JS -->
+		<script src="data/js/bootstrap.min.js"></script>
+		<!-- CUSTOM JS BELOW -->
+		<script src="data/js/main.js"></script>
+	</body>
+</html>

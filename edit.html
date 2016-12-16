@@ -1,6 +1,41 @@
-<h1>Editing {{.Title}}</h1>
-
-<form action="/save/{{.Title}}" method="POST">
-<div><textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
-<div><input type="submit" value="Save"></div>
-</form>
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>Edit a Post</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- BOOTSTRAP CSS -->
+		<link href="data/css/bootstrap.min.css" rel="stylesheet">
+		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" type="text/css" href="data/css/main.css">
+		<!-- FONT AWESOME -->
+		<link rel="stylesheet" type="text/css" href="data/css/font-awesome.min.css">
+		<style type="text/css">
+			.row {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<h1>Editing {{.Title}}</h1>
+			<div class="col-md-4 col-md-offset-4">
+				<form action="/save/{{.Title}}" method="POST">
+					<div class="form-group">
+						<textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Save">
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- JQUERY -->
+		<script src="data/js/jquery-3.1.0.min.js"></script>
+		<!-- BOOTSTRAP JS -->
+		<script src="data/js/bootstrap.min.js"></script>
+		<!-- CUSTOM JS BELOW -->
+		<script src="data/js/main.js"></script>
+	</body>
+</html>
